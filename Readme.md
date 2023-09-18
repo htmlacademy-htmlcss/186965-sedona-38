@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Виктория Кашина](https://up.htmlacademy.ru/htmlcss/38/user/186965).
-* Наставник: `Неизвестно`.
+- Студент: [Виктория Кашина](https://up.htmlacademy.ru/htmlcss/38/user/186965).
+- Наставник: [Евгения Подопригора](https://htmlacademy.ru/profile/id2387199).
 
 ---
 
