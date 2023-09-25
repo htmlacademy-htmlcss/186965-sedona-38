@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <header class="page-header">
-      <a href="index.html" class="header-logo-link">
-        <img class="page-headerlogo" src="images/header-logo.svg" alt="Логотип на главной странице">
+    <header class="page-header" data-test="header">
+      <a href="index.html" class="page-header-logo-link">
+        <img class="page-header-logo" src="images/header-logo.svg" alt="Логотип Седоны">
       </a>
       <nav class="site-navigation">
         <ul class="navigation-list">
@@ -25,26 +25,25 @@
             <a class="navigation-link active-link">Гостиницы</a>
           </li>
         </ul>
-
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+        <ul class="navigation-user">
+          <li class="navigation-user-item">
+            <button class="navigation-user-search-btn" type="button">
               <span class="visually-hidden">Поиск</span>
-            </a>
+            </button>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда</a>
+          <li class="navigation-user-item">
+            <button class="navigation-user-btn" href="">Хочу сюда</button>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-catalog">
+    <main class="main-catalog" data-test="main">
       <header class="catalog-header">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -60,7 +59,7 @@
           </li>
         </ul>
       </header>
-      <section class="hotels-filter">
+      <section class="hotels-filter" data-test="filter">
         <h2 class="visually-hidden">Список гостиниц и фильтры</h2>
 
         <form class="hotel-filters" action="https://echo.htmlacademy.ru/" method="get">
@@ -122,7 +121,7 @@
           </fieldset>
 
           <button type="submit" class="filter-btn">Применить</button>
-          <button type="reset" class="filter-btn filter-btn--reset">Применить</button>
+          <button type="reset" class="filter-btn filter-btn--reset">Сбросить</button>
         </form>
       </section>
 
@@ -155,7 +154,7 @@
         </ul>
       </section>
 
-      <section class="results">
+      <section class="results" data-test="catalog">
         <h3 class="visually-hidden">Список гостиниц</h3>
         <ul class="results-list">
           <li>
@@ -171,10 +170,10 @@
                 в избранное
               </button>
               <div class="rating-stars">
-                <span class="four-stars"></span>
-                <span class="four-stars"></span>
-                <span class="four-stars"></span>
-                <span class="four-stars"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
               </div>
               <span class="hotel-rating">Рейтинг: 8,5</span>
             </article>
@@ -192,10 +191,10 @@
                 в избранном
               </button>
               <div class="rating-stars">
-                <span class="four-stars"></span>
-                <span class="four-stars"></span>
-                <span class="four-stars"></span>
-                <span class="four-stars"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
               </div>
               <span class="hotel-rating">Рейтинг: 9,2</span>
             </article>
@@ -213,9 +212,9 @@
                 в избранное
               </button>
               <div class="rating-stars">
-                <span class="three-stars"></span>
-                <span class="three-stars"></span>
-                <span class="three-stars"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
               </div>
               <span class="hotel-rating">Рейтинг: 6,9</span>
             </article>
@@ -232,9 +231,8 @@
                 в избранное
               </button>
               <div class="rating-stars">
-                <span class="two-stars"></span>
-                <span class="two-stars"></span>
-
+                <span class="star"></span>
+                <span class="star"></span>
               </div>
               <span class="hotel-rating">Рейтинг: 5,0</span>
             </article>
@@ -263,7 +261,7 @@
         </li>
       </ul>
 
-      <section class="newsletter">
+      <section class="newsletter" data-test="subscribe">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -274,12 +272,12 @@
       </section>
     </main>
 
-    <footer class="main-page">
-      <section class="footer-social">
-        <h2 class="visually-hidden">Социальные сети</h2>
+    <footer class="page-footer" data-test="footer">
+      <div class="footer-social">
+        <h2 class="visually-hidden">Наши контакты</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
               <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -290,7 +288,7 @@
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
               <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -301,7 +299,7 @@
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="#">
+            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
               <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -312,16 +310,16 @@
             </a>
           </li>
         </ul>
-      </section>
+      </div>
 
-      <section class="contacts">
+      <div class="contacts">
         <h2 class="visually-hidden">Номер телефона для связи</h2>
         <a href="tel:+7(812)812-12-12" class="contacts-phone">+7 (812) 812-12-12</a>
-      </section>
+      </div>
 
-      <section class="developer">
+      <div class="developer">
         <h2 class="visually-hidden">Сайт сделан компанией HTML Academy</h2>
-        <a href="#">
+        <a href="https://htmlacademy.ru/">
           <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_90805_334)">
               <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black" />
@@ -365,9 +363,8 @@
               </clipPath>
             </defs>
           </svg>
-
         </a>
-      </section>
+      </div>
     </footer>
   </body>
 
