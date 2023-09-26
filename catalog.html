@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header class="page-header" data-test="header">
+    <header class="page-header">
       <a href="index.html" class="page-header-logo-link">
         <img class="page-header-logo" src="images/header-logo.svg" alt="Логотип Седоны">
       </a>
@@ -43,13 +43,13 @@
       </nav>
     </header>
 
-    <main class="main-catalog" data-test="main">
+    <main class="main-catalog">
       <header class="catalog-header">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a href="index.html" class="breadcrumbs-link">
-              <span class="visually-hidden">Главная страницы</span>
+              <span class="visually-hidden">Главная страница</span>
             </a>
           </li>
           <li class="breadcrumbs-item">
@@ -59,7 +59,7 @@
           </li>
         </ul>
       </header>
-      <section class="hotels-filter" data-test="filter">
+      <section class="hotels-filter">
         <h2 class="visually-hidden">Список гостиниц и фильтры</h2>
 
         <form class="hotel-filters" action="https://echo.htmlacademy.ru/" method="get">
@@ -137,24 +137,20 @@
 
         <ul class="catalog-view">
           <li class="catalag-view-item">
-            <button class="catalog-view-button">
-              <span class="visually-hidden">Показать карточки гостиниц</span>
-            </button>
+            <button class="catalog-view-button" aria-label="Показать карточки гостиниц"> </button>
           </li>
           <li class="catalag-view-item">
-            <button class="catalog-view-button">
-              <span class="visually-hidden">Показать результаты в строчки</span>
-            </button>
+            <button class="catalog-view-button" aria-label="Показать одну карточку"> </button>
           </li>
           <li class="catalag-view-item">
-            <button class="catalog-view-button">
-              <span class="visually-hidden">Показать результаты списком</span>
+            <button class="catalog-view-button" aria-label="Показать карточки гостиниц списком">
+
             </button>
           </li>
         </ul>
       </section>
 
-      <section class="results" data-test="catalog">
+      <section class="results">
         <h3 class="visually-hidden">Список гостиниц</h3>
         <ul class="results-list">
           <li>
@@ -261,7 +257,7 @@
         </li>
       </ul>
 
-      <section class="newsletter" data-test="subscribe">
+      <section class="newsletter">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -272,7 +268,7 @@
       </section>
     </main>
 
-    <footer class="page-footer" data-test="footer">
+    <footer class="page-footer">
       <div class="footer-social">
         <h2 class="visually-hidden">Наши контакты</h2>
         <ul class="footer-social-list">
