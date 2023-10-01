@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -45,8 +46,10 @@
     </header>
     <main class="main-index">
       <section class="welcome">
-        <h1 class="visually-hidden">Описание городка Седона</h1>
-        <img class="welcome-image-title" src="images/welcome-image.svg" alt="Приветствие" width="458" height="352">
+        <div class="welcome-wrapper">
+          <h1 class="visually-hidden">Описание городка Седона</h1>
+          <img class="welcome-image-title" src="images/welcome-image.svg" alt="Приветствие" width="458" height="352">
+        </div>
         <p class="welcome-words">Седона — небольшой городок в Аризоне, <br>
           заслуживающий большего!</p>
         <p class="welcome-reasons">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -56,29 +59,29 @@
         <ul class="reasons-list">
           <li class="reasons-item reasons-item--colored">
             <h3 class="reasons-title">Настоящий городок</h3>
-            <p class="reasons-sedcription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="reasons-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </li>
           <li class="reasons-item">
             <img src="images/real-city.jpg" class="reasons-image" alt="Настоящий городок" width="800" height="385">
           </li>
           <li class="reasons-item">
             <h3 class="reasons-title">Небольшая площадь</h3>
-            <p class="reasons-sedcription">Все достопримечательности находятся очень близко</p>
+            <p class="reasons-description">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="reasons-item">
             <h3 class="reasons-title">Красивая дорога</h3>
-            <p class="reasons-sedcription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="reasons-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="reasons-item">
             <h3 class="reasons-title">Мало туристов</h3>
-            <p class="reasons-sedcription">Большинство едет в Гранд Каньон и толпится там</p>
+            <p class="reasons-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="reasons-item">
             <img src="images/devil-bridge.jpg" class="reasons-image" alt="Мост Дьявола" width="800" height="385">
           </li>
           <li class="reasons-item reasons-item--colored">
             <h3 class="reasons-title">Там есть мост дьявола</h3>
-            <p class="reasons-sedcription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <p class="reasons-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
         </ul>
       </section>
@@ -90,14 +93,17 @@
         <p class="services-text">Опытный персонал и качественное обслуживание!</p>
         <ul class="services-list">
           <li class="services-item">
+            <img src="images/icons/home-icon.svg" alt="Жилье" class="services-icon" width="75" height="72">
             <h3 class="services-title">Жильё</h3>
             <p class="services-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="services-item">
+            <img src="images/icons/food-icon.svg" alt="Еда" class="services-icon" width="75" height="72">
             <h3 class="services-title">Еда</h3>
             <p class="services-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="services-item">
+            <img src="images/icons/souvenir-icon.svg" alt="Сувениры" class="services-icon" width="75" height="72">
             <h3 class="services-title">Сувениры</h3>
             <p class="services-text">Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -217,29 +223,30 @@
     <section class="modal">
       <h2 class="visually-hidden">Форма поиска гостиницы в Седоне</h2>
       <p class="modal-title">Поиск гостиницы в Седоне</p>
+      <span class="close-icon"></span>
       <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
         <div class="modal-row">
-          <label for="date-in">Дата заезда</label>
-          <input type="date" name="date-in" value="2020-04-27" id="date-in">
+          <label for="date-in" class="date-in-title">Дата заезда</label>
+          <input class="date-in-input" type="date" name="date-in" value="2020-04-27" id="date-in">
           <span class="modal-error">Мы не можем отправить вас в прошлое.</span>
           <span class="input-date-value">27 апреля 2020</span>
         </div>
         <div class="modal-row">
-          <label for="date-out">Дата выезда</label>
-          <input type="date" name="date-out" value="2023-09-01" id="date-out">
+          <label for="date-out" class="date-out-title">Дата выезда</label>
+          <input class="date-out-input" type="date" name="date-out" value="2023-09-01" id="date-out">
           <span class="modal-message">На эти даты есть свободные номера. Пока есть.</span>
           <span class="input-date-value">1 сентября 2023</span>
         </div>
         <div class="modal-row">
-          <label for="adults">Взрослые</label>
-          <input type="number" name="adults" id="adults" min="1" max="100" placeholder="2">
+          <label for="adults" class="adults-title">Взрослые</label>
+          <input class="adults-input" type="number" name="adults" id="adults" min="1" max="100" placeholder="2">
 
         </div>
         <div class="modal-row">
           <label for="children">Дети</label>
           <span class="children-notice">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
             Дети до 6 лет размещаются бесплатно.</span>
-          <input type="number" name="children" id="children" min="1" max="100" placeholder="2">
+          <input class="children-input" type="number" name="children" id="children" min="1" max="100" placeholder="2">
         </div>
         <button type="submit" class="modal-btn">Найти</button>
 
