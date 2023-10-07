@@ -65,7 +65,7 @@
                 <span class="breadcrumbs-arrow"></span>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
+                <a class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</a>
               </li>
             </ul>
           </header>
@@ -127,32 +127,34 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="filter-range">
-                <legend class="filter-range-title">Стоимость в сутки (р):</legend>
-                <div class="price-controls">
-                  <div class="price-controls-row">
-                    <input class="price-controls-input price-controls-input-from" type="number" name="min-price"
-                      value="0">
-                    <label class="min price">от</label>
+              <div class="filter-wrapper">
+                <fieldset class="filter-range">
+                  <legend class="filter-range-title">Стоимость в сутки (р):</legend>
+                  <div class="price-controls">
+                    <div class="price-controls-row">
+                      <input class="price-controls-input price-controls-input-from" type="number" name="min-price"
+                        value="0">
+                      <label class="min price">от</label>
+                    </div>
+                    <div class="price-controls-row">
+                      <input class="price-controls-input price-controls-input-to" type="number" name="max-price"
+                        value="9000">
+                      <label class="max price">до</label>
+                    </div>
                   </div>
-                  <div class="price-controls-row">
-                    <input class="price-controls-input price-controls-input-to" type="number" name="max-price"
-                      value="9000">
-                    <label class="max price">до</label>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
                   </div>
-                </div>
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
-                </div>
-              </fieldset>
+                </fieldset>
 
-              <div class="filter-buttons-wrapper">
-                <button type="submit" class="filter-btn blue-button">Применить</button>
-                <button type="reset" class="filter-btn filter-btn--reset">Сбросить</button>
+                <div class="filter-buttons-wrapper">
+                  <button type="submit" class="filter-btn blue-button">Применить</button>
+                  <button type="reset" class="filter-btn filter-btn--reset">Сбросить</button>
+                </div>
               </div>
             </form>
           </section>
@@ -341,7 +343,7 @@
           <p class="subscribe-text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <input class="subscribe-input" type="email" placeholder="Ваш e-mail" name="newsletter-email" required>
-            <button type="submit" class="subscribe-btn">Подписаться</button>
+            <button type="submit" class="subscribe-btn blue-button">Подписаться</button>
           </form>
         </div>
       </section>
@@ -395,7 +397,7 @@
 
         <div class="developer">
           <h2 class="visually-hidden">Сайт сделан компанией HTML Academy</h2>
-          <a href="https://htmlacademy.ru/">
+          <a href="https://htmlacademy.ru/" class="developrt-link">
             <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true" focusable="false">
               <g clip-path="url(#clip0_90805_334)">
