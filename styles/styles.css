@@ -251,8 +251,8 @@ a {
 .navigation-user-item-favorite .navigation-user-link::after {
   content: "12";
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: 10px;
+  right: 2px;
   width: 20px;
   height: 20px;
   padding: 5px;
@@ -271,8 +271,8 @@ a {
   background-size: 18px 17px;
   background-repeat: no-repeat;
   background-position: center;
-  width: 20px;
-  height: 20px;
+  width: 44px;
+  height: 60px;
 }
 
 .navigation-user-btn {
