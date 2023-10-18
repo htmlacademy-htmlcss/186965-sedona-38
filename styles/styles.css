@@ -189,6 +189,7 @@ a {
 .navigation-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   width: 339px;
   margin: 0;
   padding: 0;
@@ -481,6 +482,7 @@ a {
 
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1555,9 +1557,7 @@ a {
 }
 
 
-
 .modal-inner {
-  width: 577px;
   padding: 64px 70px;
   border-radius: 30px;
   background: #FFF;
@@ -1567,16 +1567,17 @@ a {
 .modal-top-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 48px;
 
 }
 
 .modal-title {
-
   margin: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 .modal-error {
@@ -1652,7 +1653,7 @@ a {
 
 
 .modal-input {
-  width: 412px;
+  width: 440px;
   padding: 15px 14px;
   font-family: "PTSans", "Arial", sans-serif;
   color: var(--texts-texts-basic);
@@ -1727,7 +1728,7 @@ a {
 
 .modal-number-input {
   width: 31px;
-  height: 46px;
+  height: 48px;
   font-family: inherit;
   background: var(--forms-elements-2);
   border: none;
