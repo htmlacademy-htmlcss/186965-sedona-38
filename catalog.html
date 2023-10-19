@@ -43,7 +43,7 @@
               </a>
             </li>
             <li class="navigation-user-item">
-              <button class="navigation-user-btn brown-button" type="button">Хочу сюда</button>
+              <button class="navigation-user-btn brown-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
@@ -73,59 +73,62 @@
             <h2 class="visually-hidden">Список гостиниц и фильтры</h2>
 
             <form class="hotel-filters" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="hotel-filters-group">
-                <legend class="hotel-filters-title">Инфраструктура:</legend>
-                <ul class="hotel-filters-list">
-                  <li class="hotel-filters-item">
-                    <label class="control-name">
-                      <input type="checkbox" class="control-input visually-hidden" name="pool" checked>
-                      <span class="checkbox-indicator"></span>
-                      <span class="control-label">Бассейн</span>
-                    </label>
-                  </li>
-                  <li class="hotel-filters-item">
-                    <label class="control-name">
-                      <input type="checkbox" class="control-input visually-hidden" name="parking" checked>
-                      <span class="checkbox-indicator"></span>
-                      <span class="control-label">Парковка</span>
-                    </label>
-                  </li>
-                  <li class="hotel-filters-item">
-                    <label class="control-name">
-                      <input type="checkbox" class="control-input visually-hidden" name="wifi">
-                      <span class="checkbox-indicator"></span>
-                      <span class="control-label"> Wi-Fi</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+              <div class="filter-wrapper">
+                <fieldset class="hotel-filters-group">
+                  <legend class="hotel-filters-title">Инфраструктура:</legend>
+                  <ul class="hotel-filters-list">
+                    <li class="hotel-filters-item">
+                      <label class="control-name">
+                        <input type="checkbox" class="control-input visually-hidden" name="pool" checked>
+                        <span class="checkbox-indicator"></span>
+                        <span class="control-label">Бассейн</span>
+                      </label>
+                    </li>
+                    <li class="hotel-filters-item">
+                      <label class="control-name">
+                        <input type="checkbox" class="control-input visually-hidden" name="parking" checked>
+                        <span class="checkbox-indicator"></span>
+                        <span class="control-label">Парковка</span>
+                      </label>
+                    </li>
+                    <li class="hotel-filters-item">
+                      <label class="control-name">
+                        <input type="checkbox" class="control-input visually-hidden" name="wifi">
+                        <span class="checkbox-indicator"></span>
+                        <span class="control-label"> Wi-Fi</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
 
-              <fieldset class="hotel-filters-group">
-                <legend class="hotel-filters-title">Тип жилья:</legend>
-                <ul class="hotel-filters-list">
-                  <li class="hotel-filters-item">
-                    <label class="control-name">
-                      <input type="radio" class="control-input visually-hidden" name="hotel-type" value="hotel" checked>
-                      <span class="radio-indicator"></span>
-                      <span class="control-label">Гостиница</span>
-                    </label>
-                  </li>
-                  <li class="hotel-filters-item">
-                    <label class="control-name">
-                      <input type="radio" class="control-input visually-hidden" name="hotel-type" value="motel">
-                      <span class="radio-indicator"></span>
-                      <span class="control-label">Мотель</span>
-                    </label>
-                  </li>
-                  <li class="hotel-filters-item">
-                    <label class="control-name">
-                      <input type="radio" class="control-input visually-hidden" name="hotel-type" value="apartment">
-                      <span class="radio-indicator"></span>
-                      <span class="control-label">Апартаменты</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+                <fieldset class="hotel-filters-group">
+                  <legend class="hotel-filters-title">Тип жилья:</legend>
+                  <ul class="hotel-filters-list">
+                    <li class="hotel-filters-item">
+                      <label class="control-name">
+                        <input type="radio" class="control-input visually-hidden" name="hotel-type" value="hotel"
+                          checked>
+                        <span class="radio-indicator"></span>
+                        <span class="control-label">Гостиница</span>
+                      </label>
+                    </li>
+                    <li class="hotel-filters-item">
+                      <label class="control-name">
+                        <input type="radio" class="control-input visually-hidden" name="hotel-type" value="motel">
+                        <span class="radio-indicator"></span>
+                        <span class="control-label">Мотель</span>
+                      </label>
+                    </li>
+                    <li class="hotel-filters-item">
+                      <label class="control-name">
+                        <input type="radio" class="control-input visually-hidden" name="hotel-type" value="apartment">
+                        <span class="radio-indicator"></span>
+                        <span class="control-label">Апартаменты</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
 
               <div class="filter-wrapper">
                 <fieldset class="filter-range">
@@ -151,10 +154,12 @@
                   </div>
                 </fieldset>
 
-                <div class="filter-buttons-wrapper">
+
+                <div class="filter-btn-wrapper">
                   <button type="submit" class="filter-btn blue-button">Применить</button>
                   <button type="reset" class="filter-btn filter-btn--reset">Сбросить</button>
                 </div>
+
               </div>
             </form>
           </section>

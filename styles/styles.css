@@ -244,6 +244,10 @@ a {
   cursor: pointer;
 }
 
+.navigation-user-item:nth-child(2) {
+  margin-right: 20px;
+}
+
 .navigation-user-item-favorite .navigation-user-link {
   position: relative;
 }
@@ -266,18 +270,16 @@ a {
 
 .navigation-user-link {
   padding: 14px 12px;
-  display: inline-flex;
+  display: flex;
   background-image: url('../images/icons/favorite-icon.svg');
   background-size: 18px 17px;
   background-repeat: no-repeat;
   background-position: center;
   width: 44px;
-  height: 60px;
+  height: 64px;
 }
 
 .navigation-user-btn {
-  margin-left: 20px;
-  width: 160px;
   padding: 8px 34px;
   border-radius: 4px;
 }
@@ -311,9 +313,6 @@ a {
 }
 
 .welcome-inner {
-  width: 620px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 69px;
   padding-bottom: 69px;
 
@@ -457,12 +456,15 @@ a {
   padding: 0;
 }
 
+.services-wrapper {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: center;
+}
 
 .services-title {
-  width: 505px;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 20px;
-  padding-top: 64px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -471,9 +473,8 @@ a {
 }
 
 .services-text {
-  width: 490px;
-  margin: 0 auto;
-  padding-bottom: 64px;
+  margin: 0;
+
   font-size: 22px;
   line-height: 26px;
   color: var(--texts-second);
@@ -545,8 +546,7 @@ a {
 
 
 .searching-wrapper {
-  width: 592px;
-  margin: 0 auto;
+
   padding-top: 96px;
   padding-bottom: 96px;
   text-align: center;
@@ -579,7 +579,7 @@ a {
 
 
 .subscribe {
-
+  min-height: 415px;
   background-color: var(--background-basic-3);
   background-image: url(../images/backgrounds/subscribe-bg.jpg);
   background-repeat: no-repeat;
@@ -588,10 +588,10 @@ a {
 }
 
 .subscribe-wrapper {
-  width: 684px;
-  margin: 0 auto;
   padding-top: 96px;
   padding-bottom: 104px;
+  padding-left: 258px;
+  padding-right: 258px;
   text-align: center;
 }
 
@@ -623,7 +623,7 @@ a {
 }
 
 .subscribe-input {
-  width: 412px;
+  width: 452px;
   padding: 14px 20px;
   font-family: inherit;
   font-size: 18px;
@@ -661,7 +661,8 @@ a {
 }
 
 .contacts {
-  width: 331px;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .developer {
@@ -684,6 +685,10 @@ a {
   height: 40px;
 }
 
+.footer-social-button {
+  display: flex;
+  padding: 10px;
+}
 
 .footer-social-button:hover path {
   fill: #68A2CA;
@@ -737,6 +742,7 @@ a {
 /* start catalog */
 
 .catalog-wrapper {
+  min-height: 412px;
   background-color: var(--background-basic-3);
   background-image: url('../images/backgrounds/filters-bg.jpg');
   background-repeat: no-repeat;
@@ -745,10 +751,10 @@ a {
 }
 
 .catalog-container {
-  width: 1060px;
-  margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .catalog-header {
@@ -806,7 +812,8 @@ a {
   display: flex;
 }
 
-.breadcrumbs-item-arrow {
+
+.breadcrumbs-arrow {
   width: 6.393px;
   height: 6.393px;
   border-top: 1px solid #fff;
@@ -818,6 +825,7 @@ a {
 
 .hotel-filters {
   display: flex;
+  justify-content: space-between;
 }
 
 .hotel-filters-group {
@@ -847,13 +855,17 @@ a {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  text-transform: capitalize;
   color: var(--texts-background-default);
 }
 
 .filter-wrapper {
   display: flex;
-  width: 100%;
+  width: 371px;
+
+}
+
+.filter-wrapper:last-child {
+  width: 549px;
 }
 
 .filter-range {
@@ -863,6 +875,10 @@ a {
   margin-left: auto;
   margin-right: 70px;
   border: none;
+}
+
+.filter-btn-wrapper {
+  align-self: flex-end;
 }
 
 
@@ -1023,11 +1039,10 @@ a {
 }
 
 .filter-range-title {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  text-transform: capitalize;
   color: var(--texts-background-default);
 }
 
@@ -1038,7 +1053,7 @@ a {
 }
 
 .price-controls-input {
-  width: 103px;
+  width: 143px;
   padding: 12px 20px;
   font-family: inherit;
   color: var(--texts-texts-basic);
@@ -1130,10 +1145,10 @@ a {
 }
 
 
-.filter-buttons-wrapper {
+/* .filter-buttons-wrapper {
   width: 191px;
   align-self: flex-end;
-}
+} */
 
 .filter-btn {
   width: 100%;
