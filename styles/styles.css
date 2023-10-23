@@ -338,8 +338,11 @@ a {
 }
 
 .reasons-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 400px 400px 400px;
+  /* display: flex;
+  flex-wrap: wrap; */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -447,6 +450,7 @@ a {
 }
 
 .reasons-item--colored {
+  grid-column: span 3;
   width: 1200px;
   background-color: var(--background-basic-3);
 }
@@ -613,13 +617,16 @@ a {
   color: var(--texts-background-default);
 }
 
-.subscribe-form-wrapper {
-  display: flex;
-  justify-content: center;
-}
+
 
 .subscribe-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 452px 232px;
+}
+
+.subscribe-form-wrapper {
+  /* display: flex;
+  justify-content: center; */
 }
 
 .subscribe-input {
@@ -824,8 +831,9 @@ a {
 
 
 .hotel-filters {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 370px 549px;
+  column-gap: 141px;
 }
 
 .hotel-filters-group {
@@ -835,9 +843,6 @@ a {
   border: none;
 }
 
-.hotel-filters-group:not(:nth-of-type(2)) {
-  margin-right: 70px;
-}
 
 .hotel-filters-list {
   margin: 0;
@@ -859,26 +864,24 @@ a {
 }
 
 .filter-wrapper {
-  display: flex;
-  width: 371px;
+  display: grid;
+  grid-template-columns: 150px 150px;
+  column-gap: 70px;
 
 }
 
 .filter-wrapper:last-child {
-  width: 549px;
+  grid-template-columns: 288px 191px;
 }
 
 .filter-range {
-  width: 288px;
   padding: 0;
   margin: 0;
-  margin-left: auto;
-  margin-right: 70px;
   border: none;
 }
 
 .filter-btn-wrapper {
-  align-self: flex-end;
+  align-self: end;
 }
 
 
@@ -1355,13 +1358,6 @@ a {
   line-height: 28px;
 }
 
-.hotel-info-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-column: 1 / -1;
-}
-
 .hotel-type {
   margin: 0;
   font-size: 18px;
@@ -1370,17 +1366,11 @@ a {
 }
 
 .hotel-price {
+  justify-self: end;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: var(--texts-second);
-}
-
-.hotel-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-column: 1 / -1;
 }
 
 .hotel-link-more {
@@ -1392,6 +1382,7 @@ a {
 }
 
 .hotel-link-favorite {
+  justify-self: end;
   width: 140px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -1428,16 +1419,13 @@ a {
   background-color: var(--buttons-disabled);
 }
 
-.hotel-rating-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-column: 1/-1;
-
+.rating-stars {
+  align-self: center;
 }
 
 .hotel-rating {
   display: inline-flex;
+  justify-self: end;
   width: 140px;
   padding: 9px 20px;
   border-radius: 4px;
