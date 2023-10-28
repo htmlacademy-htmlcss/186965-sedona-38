@@ -880,14 +880,6 @@ a {
 }
 
 
-.hotel-filters-item:focus-within {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.hotel-filters-item:focus-visible {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
 
 .hotel-filters-item:not(:last-child) {
   margin-bottom: 16px;
@@ -964,15 +956,15 @@ a {
   opacity: 0.6;
 }
 
+.control-input[type="checkbox"] {
+  outline: none;
+}
 
-.control-name:focus .checkbox-indicator {
+.control-name .control-input[type="checkbox"]:focus+.checkbox-indicator {
   border-color: #83B3D3;
   background-color: var(--texts-background-default);
 }
 
-.control-name:focus .control-label {
-  color: var(--texts-background-default);
-}
 
 
 .control-name:active .checkbox-indicator {
@@ -1038,11 +1030,7 @@ a {
   opacity: 0.6;
 }
 
-/* .control-name {
-  border: 3px solid transparent;
-} */
-
-.control-name:focus .radio-indicator {
+.control-name .control-input[type='radio']:focus+.radio-indicator {
   border-color: #83B3D3;
   background-color: var(--texts-background-default);
 }
@@ -1304,6 +1292,7 @@ a {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  background-color: transparent;
 }
 
 .select-control:hover {
