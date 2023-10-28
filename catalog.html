@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <div class="main-wrapper">
+  <div class="main-wrapper catalog">
     <header class="page-header">
       <div class="page-header-wrapper">
 
-        <a class="page-header-logo-link">
+        <a class="page-header-logo-link" href="index.html">
           <img class="page-header-logo" src="images/header-logo.svg" alt="Логотип Седоны" width="140" height="70">
         </a>
 
@@ -102,7 +102,7 @@
                 </fieldset>
 
                 <fieldset class="hotel-filters-group">
-                  <legend class="hotel-filters-title">Тип жилья:</legend>
+                  <legend class="hotel-filters-title">Тип Жилья:</legend>
                   <ul class="hotel-filters-list">
                     <li class="hotel-filters-item">
                       <label class="control-name">
@@ -133,7 +133,7 @@
 
               <div class="filter-wrapper">
                 <fieldset class="filter-range">
-                  <legend class="filter-range-title">Стоимость в сутки (р):</legend>
+                  <legend class="filter-range-title">Стоимость, ₽:</legend>
                   <div class="price-controls">
                     <div class="price-controls-row">
                       <input class="price-controls-input price-controls-input-from" type="number" name="min-price"
@@ -166,7 +166,7 @@
           </section>
         </div>
       </div>
-      <div class="catalog-container">
+      <div class="catalog-container catalog-container--hotels">
         <div class="hotel-wrapper">
           <section class="hotel-catalog">
             <div class="hotel-catalog-inner">
@@ -184,21 +184,21 @@
                   <li class="catalag-view-item">
                     <button class="catalog-view-button catalog-view-button--cards current"
                       aria-label="Показать карточки гостиниц">
-                      <img src="images/icons/card-mode-icon.svg" width="16px" height="14px"
+                      <img src="images/icons/card-mode-icon.svg" width="16" height="14"
                         alt="Иконка отображения карточек гостиниц">
                     </button>
                   </li>
                   <li class="catalag-view-item">
                     <button class="catalog-view-button catalog-view-button--one-card"
                       aria-label="Показать одну карточку">
-                      <img src="images/icons/big-mode-icon.svg" width="16px" height="14px"
+                      <img src="images/icons/big-mode-icon.svg" width="16" height="14"
                         alt="Иконка отображения карточки гостиницы">
                     </button>
                   </li>
                   <li class="catalag-view-item">
                     <button class="catalog-view-button catalog-view-button--list"
                       aria-label="Показать карточки гостиниц списком">
-                      <img src="images/icons/list-mode-icon.svg" width="16px" height="14px"
+                      <img src="images/icons/list-mode-icon.svg" width="16" height="14"
                         alt="Иконка отображения гостиниц списком ">
                     </button>
                   </li>
@@ -331,7 +331,7 @@
               <a class="pagination-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link dots" href="#">...</a>
+              <a class="pagination-link dots">...</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
@@ -449,6 +449,89 @@
       </div>
     </footer>
   </div>
+  <section class="modal">
+
+    <div class="modal-inner">
+      <h2 class="visually-hidden">Форма поиска гостиницы в Седоне</h2>
+      <div class="modal-top-wrap">
+        <p class="modal-title">Поиск гостиницы в Седоне</p>
+        <button class="modal-close-btn" aria-label="Кнопка закрытия модального окна"></button>
+      </div>
+      <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
+        <div class="modal-row modal-row--date">
+
+          <label for="date-in" class="date-in-title modal-label">Дата Заезда:</label>
+          <input class="date-in-input modal-input" type="text" placeholder="27 апреля 2020" name="date-in" id="date-in">
+          <span class="modal-error">Мы не можем отправить вас в прошлое.</span>
+
+        </div>
+        <div class="modal-row modal-row--date">
+
+          <label for="date-out" class="date-out-title modal-label">Дата Выезда:</label>
+          <input class="date-out-input modal-input" type="text" name="date-out" id="date-out"
+            placeholder="1 сентября 2023">
+
+          <span class="modal-message">На эти даты есть свободные номера. Пока есть.</span>
+
+        </div>
+        <div class="modal-row modal-row--people">
+
+          <div class="modal-wrap modal-adults">
+            <label for="adults" class="adults-title modal-label">Взрослые:</label>
+            <div class="modal-number-wrap">
+              <button class="modal-minus" type="button" name="minus-adults" aria-label="Уменьшить количетство взрослых">
+                <span class="icon-minus"></span>
+              </button>
+              <input class="adults-input modal-number-input" type="number" name="adults" id="adults" min="1" max="100"
+                placeholder="2">
+              <button class="modal-plus" type="button" name="plus-adults" aria-label="Увеличить количетство взрослых">
+                <span class="icon-plus"></span>
+              </button>
+            </div>
+          </div>
+
+
+          <div class="modal-wrap modal-children">
+            <div class="modal-notice">
+              <label for="children" class="modal-label">Дети:</label>
+              <p class="children-tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
+                      fill="white" />
+                  </svg>
+
+                </button>
+                <span class="children-tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
+                  которые будут с вами, возраст которых от 6
+                  до
+                  18
+                  лет.
+                  Дети до 6 лет размещаются бесплатно.</span>
+              </p>
+            </div>
+            <div class="modal-number-wrap">
+              <button class="modal-minus" type="button" name="minus-adults" aria-label="Уменьшить количетство детей">
+                <span class="icon-minus"></span>
+              </button>
+              <input class="children-input modal-number-input" type="number" name="children" id="children" min="1"
+                max="100" placeholder="2">
+              <button class="modal-plus" type="button" name="plus-adults" aria-label="Увеличить количетство взрослых">
+                <span class="icon-plus"></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <button type="submit" class="modal-btn blue-button">Найти</button>
+      </form>
+    </div>
+
+
+  </section>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

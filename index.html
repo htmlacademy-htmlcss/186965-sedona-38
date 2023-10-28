@@ -243,7 +243,6 @@
     </footer>
   </div>
 
-
   <section class="modal">
 
     <div class="modal-inner">
@@ -254,23 +253,24 @@
       </div>
       <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
         <div class="modal-row modal-row--date">
-          <div class="modal-row-inner">
-            <label for="date-in" class="date-in-title modal-label">Дата заезда:</label>
-            <input class="date-in-input modal-input" type="text" placeholder="27 апреля 2020"></input>
-          </div>
+
+          <label for="date-in" class="date-in-title modal-label">Дата Заезда:</label>
+          <input class="date-in-input modal-input" type="text" placeholder="27 апреля 2020" name="date-in" id="date-in">
           <span class="modal-error">Мы не можем отправить вас в прошлое.</span>
+
         </div>
         <div class="modal-row modal-row--date">
-          <div class="modal-row-inner">
-            <label for="date-out" class="date-out-title modal-label">Дата выезда:</label>
-            <input class="date-out-input modal-input" type="text" name="date-out" id="date-out"
-              placeholder="1 сентября 2023">
-          </div>
+
+          <label for="date-out" class="date-out-title modal-label">Дата Выезда:</label>
+          <input class="date-out-input modal-input" type="text" name="date-out" id="date-out"
+            placeholder="1 сентября 2023">
+
           <span class="modal-message">На эти даты есть свободные номера. Пока есть.</span>
 
         </div>
         <div class="modal-row modal-row--people">
-          <div class="modal-wrap">
+
+          <div class="modal-wrap modal-adults">
             <label for="adults" class="adults-title modal-label">Взрослые:</label>
             <div class="modal-number-wrap">
               <button class="modal-minus" type="button" name="minus-adults" aria-label="Уменьшить количетство взрослых">
@@ -284,11 +284,22 @@
             </div>
           </div>
 
-          <div class="modal-wrap">
+
+          <div class="modal-wrap modal-children">
             <div class="modal-notice">
               <label for="children" class="modal-label">Дети:</label>
-              <p class="children-notice">
-                <span class="children-notice-text">Укажите количество детей, которые будут с вами, возраст которых от 6
+              <p class="children-tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
+                      fill="white" />
+                  </svg>
+
+                </button>
+                <span class="children-tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей,
+                  которые будут с вами, возраст которых от 6
                   до
                   18
                   лет.
@@ -306,6 +317,7 @@
               </button>
             </div>
           </div>
+
         </div>
         <button type="submit" class="modal-btn blue-button">Найти</button>
       </form>
