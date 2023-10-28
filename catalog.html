@@ -11,7 +11,7 @@
 
 <body>
   <div class="main-wrapper catalog">
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <div class="page-header-wrapper">
 
         <a class="page-header-logo-link" href="index.html">
@@ -50,7 +50,7 @@
       </div>
     </header>
 
-    <main class="main-catalog">
+    <main class="main-catalog" data-test="main">
       <div class="catalog-wrapper">
         <div class="catalog-container">
           <header class="catalog-header">
@@ -69,7 +69,7 @@
               </li>
             </ul>
           </header>
-          <section class="hotels-filter">
+          <section class="hotels-filter" data-test="filter">
             <h2 class="visually-hidden">Список гостиниц и фильтры</h2>
 
             <form class="hotel-filters" action="https://echo.htmlacademy.ru/" method="get">
@@ -167,7 +167,7 @@
         </div>
       </div>
       <div class="catalog-container catalog-container--hotels">
-        <div class="hotel-wrapper">
+        <div class="hotel-wrapper" data-test="catalog">
           <section class="hotel-catalog">
             <div class="hotel-catalog-inner">
               <h2 class="visually-hidden">Результаты поиска</h2>
@@ -339,7 +339,7 @@
           </ul>
         </div>
       </div>
-      <section class="subscribe subscribe-catalog">
+      <section class="subscribe subscribe-catalog" data-test="subscribe">
         <div class="subscribe-wrapper">
           <h2 class="subscribe-headline">Подпишитесь на рассылку</h2>
           <p class="subscribe-text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
@@ -351,7 +351,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <div class="page-footer-wrapper">
         <div class="footer-social">
           <h2 class="visually-hidden">Наши контакты</h2>
