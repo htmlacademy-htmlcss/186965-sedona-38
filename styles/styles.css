@@ -89,6 +89,7 @@ a {
   background-color: var(--buttons-basic);
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .brown-button:hover {
@@ -118,6 +119,8 @@ a {
   background-color: var(--background-basic-3);
   border: none;
   cursor: pointer;
+  outline: none;
+
 }
 
 .blue-button:hover {
@@ -178,6 +181,12 @@ a {
   display: inline-flex;
   width: 140px;
 }
+
+.catalog .page-header-logo-link:focus .page-header-logo {
+  outline: -webkit-focus-ring-color auto 1px;
+  ;
+}
+
 
 .site-navigation {
   display: flex;
@@ -630,7 +639,7 @@ a {
 
 .subscribe-input {
   width: 452px;
-  padding: 14px 20px;
+  padding: 10px 17px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -638,13 +647,18 @@ a {
   border-radius: 4px 0px 0px 4px;
   border: none;
   background: var(--forms-elements-2);
+  outline: none;
+  border: 3px solid transparent;
+}
+
+.subscribe-input:focus {
+  border-color: #83B3D3;
 }
 
 .subscribe-btn {
   width: 232px;
   padding: 8px 50px;
   border-radius: 0px 4px 4px 0px;
-
 }
 
 
@@ -696,6 +710,7 @@ a {
 .footer-social-button {
   display: flex;
   padding: 10px;
+  outline: none;
 }
 
 .footer-social-button:hover path {
@@ -717,6 +732,7 @@ a {
   text-transform: uppercase;
   color: var(--texts-texts-basic);
   text-decoration: none;
+  outline: none;
 }
 
 .contacts-phone:hover {
@@ -729,6 +745,10 @@ a {
 
 .contacts-phone:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.developrt-link {
+  outline: none;
 }
 
 .developrt-link:hover path {
@@ -859,6 +879,16 @@ a {
   list-style: none;
 }
 
+
+.hotel-filters-item:focus-within {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.hotel-filters-item:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+
 .hotel-filters-item:not(:last-child) {
   margin-bottom: 16px;
 }
@@ -913,6 +943,7 @@ a {
   height: 20px;
   background-color: var(--texts-background-default);
   border-radius: 4px;
+  border: 3px solid transparent;
 }
 
 .control-label {
@@ -935,9 +966,7 @@ a {
 
 
 .control-name:focus .checkbox-indicator {
-  width: 14px;
-  height: 14px;
-  border: 3px solid #83B3D3;
+  border-color: #83B3D3;
   background-color: var(--texts-background-default);
 }
 
@@ -960,24 +989,25 @@ a {
 
 .control-input[type="checkbox"]:checked+.checkbox-indicator::before,
 .control-input[type="checkbox"]:checked+.checkbox-indicator::after {
+  content: "";
   position: absolute;
   height: 1px;
   background-color: #3F5E72;
-  content: "";
+
 }
 
 .control-input[type="checkbox"]:checked+.checkbox-indicator::before {
-  width: 6px;
-  top: 12px;
-  left: 4px;
+  width: 5px;
+  top: 8px;
+  left: 2px;
   transform: rotate(45deg);
 }
 
 
 .control-input[type="checkbox"]:checked+.checkbox-indicator::after {
-  top: 10px;
-  left: 6px;
-  width: 11px;
+  top: 7px;
+  left: 5px;
+  width: 9px;
   transform: rotate(-45deg);
 }
 
@@ -992,6 +1022,7 @@ a {
   height: 20px;
   background-color: var(--texts-background-default);
   border-radius: 50px;
+  border: 3px solid transparent;
 }
 
 
@@ -1007,11 +1038,12 @@ a {
   opacity: 0.6;
 }
 
+/* .control-name {
+  border: 3px solid transparent;
+} */
 
 .control-name:focus .radio-indicator {
-  width: 14px;
-  height: 14px;
-  border: 3px solid #83B3D3;
+  border-color: #83B3D3;
   background-color: var(--texts-background-default);
 }
 
@@ -1036,8 +1068,8 @@ a {
 .control-input[type="radio"]:checked+.radio-indicator::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 2px;
+  left: 2px;
   width: 10px;
   height: 10px;
   border-radius: 50px;
@@ -1067,7 +1099,7 @@ a {
 
 .price-controls-input {
   width: 144px;
-  padding: 12px 20px;
+  padding: 9px 18px;
   font-family: inherit;
   color: var(--texts-texts-basic);
   font-size: 18px;
@@ -1077,6 +1109,8 @@ a {
   background-color: var(--forms-elements-2);
   appearance: textfield;
   border-radius: 4px 0px 0px 4px;
+  outline: none;
+  border: 3px solid transparent;
 }
 
 .price-controls-input:hover {
@@ -1084,7 +1118,7 @@ a {
 }
 
 .price-controls-input:focus {
-  outline: 3px solid #83B3D3;
+  border-color: #83B3D3;
   background: #E6E6E6;
 
 }
@@ -1157,7 +1191,7 @@ a {
 
 .filter-btn {
   width: 100%;
-  padding: 9px 47px 7px 47px;
+  padding: 7px 47px 7px 47px;
   margin-bottom: 36px;
   font-size: 16px;
   font-weight: 700;
@@ -1167,7 +1201,7 @@ a {
 
 .filter-btn--reset {
   width: 100%;
-  padding: 5px 50px;
+  padding: 2px 50px;
   margin-bottom: 0;
   font-family: inherit;
   font-weight: 700;
@@ -1177,6 +1211,8 @@ a {
   background-color: transparent;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
+  border: 3px solid transparent;
 }
 
 .filter-btn--reset:hover {
@@ -1184,12 +1220,11 @@ a {
 }
 
 .filter-btn--reset:focus {
-  border: 3px solid #83B3D3;
-  padding: 5px 49px;
+  border-color: #83B3D3;
+
 }
 
 .filter-btn--reset:active {
-
   opacity: 0.3;
 }
 
@@ -1268,6 +1303,7 @@ a {
   appearance: none;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
 }
 
 .select-control:hover {
@@ -1275,6 +1311,10 @@ a {
 }
 
 .select-control:focus {
+  border-color: var(--buttons-blue-hover);
+}
+
+.select-control:focus-visible {
   border-color: var(--buttons-blue-hover);
 }
 
@@ -1302,6 +1342,7 @@ a {
   border-radius: 4px;
   border: 2px solid var(--forms-elements-1);
   cursor: pointer;
+  outline: none;
 }
 
 .catalog-view-button.current {
@@ -1313,6 +1354,10 @@ a {
 }
 
 .catalog-view-button:focus {
+  border: 2px solid var(--buttons-blue-hover);
+}
+
+.catalog-view-button:focus-visible {
   border: 2px solid var(--buttons-blue-hover);
 }
 
@@ -1404,6 +1449,7 @@ a {
   border: none;
   padding-left: 18px;
   padding-right: 19px;
+  outline: none;
 }
 
 .favorite-btn:hover {
@@ -1475,6 +1521,7 @@ a {
   border-radius: 4px;
   box-sizing: border-box;
   border: 1px solid transparent;
+  outline: none;
 }
 
 
@@ -1552,6 +1599,7 @@ a {
 /* modal */
 
 .modal {
+  /* display: flex; */
   display: none;
   align-items: center;
   justify-content: center;
@@ -1572,7 +1620,7 @@ a {
 .modal-inner {
   width: 717px;
   min-height: 576px;
-  padding: 56px 70px 60px 70px;
+  padding: 63px 70px 60px 70px;
 
   border-radius: 30px;
   background: #FFF;
@@ -1584,7 +1632,8 @@ a {
   grid-template-areas: 'title close-btn';
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 55px;
+  margin-bottom: 63px;
+  position: relative;
 
 }
 
@@ -1598,8 +1647,9 @@ a {
 }
 
 .modal-form {
-  display: grid;
-  row-gap: 23px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
 
 .modal-error {
@@ -1623,9 +1673,9 @@ a {
 .modal-close-btn {
   grid-area: close-btn;
   display: block;
-  position: relative;
-  top: 7px;
-  left: 17px;
+  position: absolute;
+  top: 0;
+  right: -17px;
   width: 52px;
   height: 52px;
   background-color: var(--forms-elements-2);
@@ -1640,7 +1690,7 @@ a {
 .modal-close-btn::before {
   content: "";
   position: absolute;
-  left: 13px;
+  left: 14px;
   top: 23px;
   width: 19px;
   height: 2px;
@@ -1665,11 +1715,7 @@ a {
   border-color: var(--modal-blue-color);
 }
 
-.modal-close-btn:focus::after,
-.modal-close-btn:focus::before {
-  left: 10px;
-  top: 22 px;
-}
+
 
 .modal-close-btn:active::after,
 .modal-close-btn:active::before {
@@ -1732,6 +1778,12 @@ a {
 
 }
 
+.modal-row-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .modal-row--date::after {
   content: "";
@@ -1772,6 +1824,7 @@ a {
   font-size: 18px;
   color: var(--texts-texts-basic);
   font-weight: 700;
+  border: 3px solid transparent;
 }
 
 .modal-number-input::placeholder {
@@ -1780,14 +1833,28 @@ a {
   font-weight: 700;
 }
 
+.modal-number-input:focus {
+  outline: none;
+}
+
+.modal-number-input:focus-visible {
+  border-color: var(--buttons-second);
+  z-index: 1;
+}
+
+
 .modal-number-wrap {
   display: flex;
 }
 
 .modal-minus {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 48px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   background: var(--forms-elements-2);
   border: none;
   border-top-left-radius: 4px;
@@ -1798,13 +1865,11 @@ a {
 
 .icon-minus {
   display: inline-flex;
-  border: 3px solid transparent;
+  position: relative;
 }
 
 .icon-minus::after {
   content: "";
-  position: absolute;
-  top: 16px;
   width: 2px;
   height: 14px;
   background-color: rgba(117, 97, 87, 0.30);
@@ -1815,15 +1880,15 @@ a {
   background-color: var(--texts-texts-basic);
 }
 
-.modal-minus:focus .icon-minus {
-  border-color: var(--buttons-second);
-  padding: 7px;
+.modal-minus:focus-visible .icon-minus {
+  outline: 3px solid var(--buttons-second);
+  padding: 5px 10px;
   border-radius: 4px;
 }
 
-.modal-minus:focus .icon-minus::after {
-  left: 19px;
 
+.modal-minus:focus-visible .icon-minus::after {
+  background-color: var(--texts-texts-basic);
 }
 
 .modal-minus:active .icon-minus::after {
@@ -1831,9 +1896,13 @@ a {
 }
 
 .modal-plus {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 48px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   background: var(--forms-elements-2);
   border: none;
   border-top-right-radius: 4px;
@@ -1844,14 +1913,12 @@ a {
 
 .icon-plus {
   display: inline-flex;
-  border: 3px solid transparent;
+  position: relative;
 }
 
 .icon-plus::after,
 .icon-plus::before {
   content: "";
-  position: absolute;
-  top: 16px;
   width: 2px;
   height: 14px;
   background-color: rgba(117, 97, 87, 0.30);
@@ -1862,20 +1929,26 @@ a {
   transform: rotate(90deg);
 }
 
+.icon-plus::before {
+  position: relative;
+  left: 2px;
+}
+
 
 .modal-plus:hover .icon-plus::after {
   background-color: var(--texts-texts-basic);
 }
 
-.modal-plus:focus .icon-plus {
-  border-color: var(--buttons-second);
-  padding: 7px;
+
+.modal-plus:focus-visible .icon-plus {
+  padding: 5px 10px;
   border-radius: 4px;
+  outline: 3px solid var(--buttons-second);
 }
 
-.modal-plus:focus .icon-plus::after {
-  left: 19px;
-
+.modal-plus:focus-visible .icon-plus::before,
+.modal-plus:focus-visible .icon-plus::after {
+  background-color: var(--texts-texts-basic);
 }
 
 .modal-plus:active .icon-plus::after {
@@ -1886,16 +1959,6 @@ a {
   background-color: var(--texts-texts-basic);
 }
 
-.modal-plus:focus .icon-plus {
-  border: 3px solid var(--buttons-second);
-  padding: 7px;
-  border-radius: 4px;
-}
-
-.modal-plus:focus .icon-plus::before {
-  left: 19px;
-
-}
 
 .modal-plus:active .icon-plus::before {
   background-color: rgba(0, 0, 0, 0.2);
@@ -1911,8 +1974,8 @@ a {
   margin: 0;
   position: absolute;
   left: 60px;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 
 .tooltip-icon {
