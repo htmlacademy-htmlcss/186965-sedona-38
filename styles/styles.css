@@ -71,11 +71,6 @@ body {
 }
 
 
-a {
-  font-family: inherit;
-  color: var(--texts-texts-basic);
-  text-decoration: none;
-}
 
 .visually-hidden {
   position: absolute;
@@ -192,11 +187,9 @@ a {
   z-index: 1;
   display: inline-flex;
   width: 140px;
-}
-
-.catalog .page-header-logo-link:focus .page-header-logo {
-  outline: -webkit-focus-ring-color auto 1px;
-
+  font-family: inherit;
+  color: var(--texts-texts-basic);
+  text-decoration: none;
 }
 
 
@@ -227,6 +220,9 @@ a {
   line-height: 24px;
   text-transform: capitalize;
   cursor: pointer;
+  font-family: inherit;
+  color: var(--texts-texts-basic);
+  text-decoration: none;
 }
 
 
@@ -298,6 +294,9 @@ a {
   background-position: center;
   width: 44px;
   height: 64px;
+  font-family: inherit;
+  color: var(--texts-texts-basic);
+  text-decoration: none;
 }
 
 .navigation-user-btn {
@@ -713,6 +712,8 @@ a {
 .footer-social-button {
   display: flex;
   padding: 10px;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 .footer-social-button:hover path {
@@ -732,8 +733,10 @@ a {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
+  font-family: inherit;
   color: var(--texts-texts-basic);
   text-decoration: none;
+
 }
 
 .contacts-phone:hover {
@@ -748,15 +751,21 @@ a {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.developrt-link:hover path {
+.developer-link {
+  font-family: inherit;
+  color: var(--texts-texts-basic);
+  text-decoration: none;
+}
+
+.developer-link:hover path {
   fill: #756157;
 }
 
-.developrt-link:focus path {
+.developer-link:focus path {
   fill: #756157;
 }
 
-.developrt-link:active path {
+.developer-link:active path {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -812,6 +821,7 @@ a {
 .breadcrumbs-link {
   line-height: 21px;
   color: var(--texts-background-default);
+  font-family: inherit;
   text-decoration: none;
 }
 
@@ -1359,10 +1369,10 @@ a {
 
 .hotel-image-link {
   grid-column: 1 / -1;
+  text-decoration: none;
 }
 
 .hotel-image {
-
   width: 300px;
   height: 212px;
   object-fit: cover;
@@ -1371,6 +1381,13 @@ a {
 .hotel-name-link-wrap {
   grid-column: 1 / -1;
   display: flex;
+
+}
+
+.hotel-name-link {
+  font-family: inherit;
+  color: var(--texts-texts-basic);
+  text-decoration: none;
 }
 
 
@@ -1486,6 +1503,7 @@ a {
   padding: 12px 18px;
   font-size: 20px;
   font-weight: 700;
+  font-family: inherit;
   line-height: 36px;
   text-transform: uppercase;
   color: var(--texts-background-default);
@@ -1708,7 +1726,7 @@ a {
   border: none;
   line-height: 24px;
   color: #000;
-  font-family: PT Sans;
+  font-family: inherit;
   font-size: 18px;
 }
 
